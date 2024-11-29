@@ -1,0 +1,324 @@
+/* Reset default styles */
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.vid-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bgvid {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.inner-container {
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.bgvid.inner {
+    top: -50%;
+    left: -50%;
+    filter: url("data:image/svg+xml;utf9,<svg%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'><filter%20id='blur'><feGaussianBlur%20stdDeviation='10'%20/></filter></svg>#blur");
+    -webkit-filter: blur(10px); 
+    filter: blur(20px); 
+}
+
+.box {
+    position: relative;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    display: grid;
+    width: 100%;
+    max-width: 1000px;  /* Increased max-width for larger screens */
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr; /* Two columns for wide screens */
+}
+
+.box h1 {
+    text-align: center;
+    font-size: 30px;
+    grid-column: span 2; /* Center header across columns */
+}
+
+/* Column styling for input groups */
+.column {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+/* Gender section styling */
+.gender {
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+}
+
+.gender label {
+    font-size: 16px;
+}
+
+.gender-options {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.box input {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    border: 1px solid #2ecc71;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.box input:focus,
+.box input:active {
+    outline: none;
+    border-color: #27ae60;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.box button {
+    background: #2ecc71;
+    border: 0;
+    color: #fff;
+    padding: 15px;
+    font-size: 20px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    grid-column: span 2; /* Button spans both columns */
+}
+
+.box button:active {
+    background: #27ae60;
+}
+
+.box div {
+    margin-top: 10px; 
+    text-align: left;  
+    grid-column: span 2;  
+}
+
+.box input[type="radio"],
+.box input[type="checkbox"] {
+    margin: 10px;  
+    padding-top: -30px; 
+}
+
+.box a {
+    color: #2ecc71;
+    text-decoration: none;
+}
+
+.box p {
+    font-size: 14px;
+    text-align: center;
+}
+
+.box p span {
+    cursor: pointer;
+    color: #666;
+}
+
+/* Style for the Agree to Terms section */
+.agree-term {
+    display: flex;  
+    align-items: center; 
+    gap: 10px; 
+    margin-top: 10px; 
+    grid-column: span 2;  /* Spans both columns to align with form elements */
+}
+
+/* Style the checkbox */
+.agree-term input[type="checkbox"] {
+    width: auto; /* Adjust the size of the checkbox */
+    margin: 0; /* Remove extra spacing */
+}
+
+.agree-term label {
+    font-size: 16px; 
+    color: #fff; 
+}
+
+.agree-term a {
+    color: #2ecc71; 
+    text-decoration: none; 
+}
+
+.agree-term a:hover {
+    text-decoration: underline; 
+}
+
+/* Responsive Styles */
+
+/* For large screens (laptop/desktop) */
+@media (max-width: 1200px) {
+    .box {
+        max-width: 1200px;  /* Set wider max-width for larger screens */
+        grid-template-columns: 1fr 1fr; /* Two columns for wider screens */
+    }
+
+    .box h1 {
+        font-size: 30px;
+    }
+
+    .box input, .box button {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .box button {
+        font-size: 18px;
+    }
+
+    .box div {
+        grid-column: span 1;
+    }
+
+    .agree-term {
+        grid-column: span 1; /* Align agree term with other form elements */
+    }
+}
+
+/* For large-medium screens (tablets/laptops) */
+@media (max-width: 1024px) {
+    .box {
+        max-width: 900px;  /* Adjusted max-width */
+        grid-template-columns: 1fr; /* Single column layout for tablets */
+    }
+
+    .box h1 {
+        font-size: 26px;
+    }
+
+    .box input, .box button {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    .box button {
+        font-size: 18px;
+    }
+
+    .box div {
+        grid-column: span 1;
+    }
+
+    .agree-term {
+        grid-column: span 1; /* Align agree term with other form elements */
+    }
+}
+
+/* For medium screens (tablets) */
+@media (max-width: 800px) {
+    .box {
+        max-width: 100%;  /* Ensure the box uses full width on smaller tablets */
+        padding: 20px;
+    }
+
+    .box h1 {
+        font-size: 24px;
+    }
+
+    .box button {
+        font-size: 18px;
+    }
+
+    .box div {
+        grid-column: span 1;
+    }
+
+    .agree-term {
+        grid-column: span 1;
+    }
+}
+
+/* For mobile screens */
+@media (max-width: 480px) {
+    .box {
+        padding: 15px;
+    }
+
+    .box h1 {
+        font-size: 20px;
+    }
+
+    .box input, .box button {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .inner-container {
+        max-width: 95%;
+        padding: 10px;
+    }
+
+    .box input {
+        padding: 10px;
+    }
+
+    .box button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .box p {
+        font-size: 12px;
+    }
+
+    .agree-term {
+        grid-column: span 1;
+    }
+}
+
+/* For extra-small devices */
+@media (max-width: 320px) {
+    .box {
+        padding: 10px;
+    }
+
+    .box h1 {
+        font-size: 18px;
+    }
+
+    .box input, .box button {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .inner-container {
+        max-width: 90%;
+        padding: 8px;
+    }
+
+    .agree-term {
+        grid-column: span 1;
+    }
+}
+

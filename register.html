@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="register.css" />
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="vid-container">
+      <video
+        class="bgvid"
+        autoplay="autoplay"
+        muted="muted"
+        preload="auto"
+        loop
+      >
+        <source
+          src="https://videos.pexels.com/video-files/19247660/19247660-uhd_3840_2160_60fps.mp4"
+          type="video/webm"
+        />
+      </video>
+      <div class="inner-container">
+        <video
+          class="bgvid inner"
+          autoplay="autoplay"
+          muted="muted"
+          preload="auto"
+          loop
+        >
+          <source
+            src="https://videos.pexels.com/video-files/19247660/19247660-uhd_3840_2160_60fps.mp4?random=1"
+            type="video/webm"
+          />
+        </video>
+        <div class="box">
+          <h1>Register Now</h1>
+
+          <form id="registerForm" action="#" method="post">
+            <div class="column">
+              <input type="text" id="name" placeholder="First Name" name="name" required />
+              <input
+                type="email"
+                id="email"
+                placeholder="Email Address"
+                name="email"
+                required
+              />
+            </div>
+
+            <div class="column">
+              <input
+                type="text"
+                id="lastname"
+                placeholder="Last Name"
+                name="lastname"
+                required
+              />
+              <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                name="password"
+                required
+              />
+            </div>
+
+            <div class="column">
+              <input type="date" id="dob" name="dob" required />
+              <input
+                type="text"
+                id="phone"
+                placeholder="Phone Number"
+                name="phone"
+                required
+              />
+            </div>
+
+            <!-- Gender -->
+            <div class="gender">
+              <label>Gender:</label>
+              <div class="gender-options">
+                <input
+                  type="radio"
+                  id="male"
+                  name="gender"
+                  value="Male"
+                  required
+                />
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female" />
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="Other" />
+                <label for="other">Other</label>
+              </div>
+            </div>
+
+            <div class="agree-term">
+              <input type="checkbox" id="agree" name="agree" required />
+              <label for="agree"
+                >I agree to the <a href="#">Terms and Conditions</a></label
+              >
+            </div>
+            <button type="submit">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="register.js"></script>
+  </body>
+</html>

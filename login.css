@@ -1,0 +1,185 @@
+/* Reset default styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.vid-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Background video styles */
+.bgvid {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* Inner container to center the login box */
+.inner-container {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+
+.box {
+  position: relative;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* Title styling */
+.box h1 {
+  margin: 30px 0;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+/* Input field styling */
+.box input {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 15px auto;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Button styling */
+.box button {
+  background: #2ecc71;
+  border: 0;
+  color: #fff;
+  padding: 15px;
+  font-size: 18px;
+  width: 100%;
+  max-width: 330px;
+  margin: 20px auto;
+  display: block;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.box button:active {
+  background: #27ae60;
+}
+
+/* Paragraph styling */
+.box p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.box p a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.box p a:hover {
+  color: #2ecc71;
+}
+
+/* Responsive Styles */
+
+/* For devices with width up to 1024px (tablets and smaller screens) */
+@media (max-width: 1024px) {
+  .box {
+    padding: 25px;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .box h1 {
+    font-size: 22px;
+  }
+
+  .box input, .box button {
+    max-width: 90%;
+    font-size: 16px;
+  }
+
+  .inner-container {
+    max-width: 350px;
+    padding: 20px;
+    height: auto;
+  }
+}
+
+/* For devices with width up to 768px (mobile portrait) */
+@media (max-width: 768px) {
+  .inner-container {
+    max-width: 80%;
+    padding: 20px;
+  }
+
+  .box {
+    padding: 15px;
+  }
+
+  .box h1 {
+    font-size: 22px;
+  }
+
+  .box input, .box button {
+    font-size: 16px;
+    padding: 12px;
+    width: 100%;
+  }
+}
+
+/* For extra small devices (mobile phones under 480px) */
+@media (max-width: 480px) {
+  .box {
+    padding: 10px;
+  }
+
+  .box h1 {
+    font-size: 20px;
+  }
+
+  .box input, .box button {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .inner-container {
+    max-width: 90%;
+    height: auto;
+  }
+
+  .box input {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .box button {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .box p {
+    font-size: 12px;
+  }
+}
+
